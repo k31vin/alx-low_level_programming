@@ -1,7 +1,8 @@
 /*
  * File: 101-quote.c
  * Auth: Christopher K. Oyier
- * Desc: A program that prints "and that piece of art is useful" - Dora Korpar, 2015-10-19,
+ * Desc: A program that prints "and that piece of art is useful"
+ * - Dora Korpar, 2015-10-19,
  *       followed by a new line, to the standard error.
  */
 
