@@ -1,0 +1,5 @@
+#!/bin/bash
+# Get the C file name from the CFILE environment variable
+cfile=$CFILE
+# Generate the assembly code using gcc
+gcc -S -masm=intel $cfile -o ${cfile%.*}.s
