@@ -1,9 +1,14 @@
 #include <stdio.h>
 
 /**
- *Prints all possible different combinations of three digits
+ *Prints all possible combinations of three digits, in ascending order.
  *
- * Return: Always 0 (Success)
+ * Numbers must be separated by ', '.
+ * The three digits must be different.
+ * 012, 120, 102, 021, 201, 210 are considered the same combination.
+ * Only the smallest combination of three digits should be printed.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
