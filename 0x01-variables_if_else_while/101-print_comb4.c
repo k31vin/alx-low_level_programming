@@ -1,38 +1,39 @@
 #include <stdio.h>
-
 /**
- *Prints all possible combinations of three digits, in ascending order.
+ * main - is entry of program
  *
- * Numbers must be separated by ', '.
- * The three digits must be different.
- * 012, 120, 102, 021, 201, 210 are considered the same combination.
- * Only the smallest combination of three digits should be printed.
- *
- * Return: Always 0.
+ * Return: 0, if succesful
  */
 int main(void)
 {
-int i, j, k;
+	/*
+	 * prints all combination of 3 different digits once,in accending order
+	 * after each combination follows a coma and a space
+	 */
 
-for (i = 0; i <= 7; i++)
-{
-for (j = i + 1; j <= 8; j++)
-{
-for (k = j + 1; k <= 9; k++)
-{
-putchar(i + '0');
-putchar(j + '0');
-putchar(k + '0');
+	/* take abc as possible digits */
+	int a, b, c;
 
-if (i != 7 || j != 8 || k != 9)
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-}
-putchar('\n');
-
-return (0);
+	/*loop through a,1st digit,lowest of the 3, highest possible is 7*/
+	for (a = 0 ; a <= 7 ; a++)
+	{
+		/*loop through b,2nd digit,higher than a by 1,highest possible is 8*/
+		for (b = a + 1 ; b <= 8 ; b++)
+		{
+			/*loop through c,3rd digit,higher than b by 1,highest possible is 9*/
+			for (c = b + 1 ; c <= 9 ; c++)
+			{
+				putchar((a % 10) + '0');
+				putchar((b % 10) + '0');
+				putchar((c % 10) + '0');
+				/*continues to put coma,space,stop if last highest combination is met*/
+				if (a == 7 && b == 8 && c == 9)
+					continue;
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
