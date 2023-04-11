@@ -9,20 +9,20 @@
  * Return: number of bits to flip to get from n to m.
  */
 
-unsigned int flp_bit(unsigned long int n, unsigned long int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-        unsigned long int bt, chek;
-        unsigned int num, i;
+	unsigned long int btw, check;
+	unsigned int num, i;
 
-        chek = 1;
-        bt = n ^ m;
-        num = 0;
+	check = 1;
+	btw = n ^ m;
+	num = 0;
 
-        for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
-        {
-                if (chek == (bt & check))
-                        num++;
-                chek <<= 1;
-        }
-        return (num);
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
+	{
+		if (check == (btw & check))
+			num++;
+		check <<= 1;
+	}
+	return (num);
 }
