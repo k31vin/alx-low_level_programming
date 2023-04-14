@@ -1,5 +1,5 @@
-         About this project;
-    In this project I learnt and practiced :
+    
+    this task is about:
     - How to create, open, close, read and write files
     - What are file descriptors
     - What are the 3 standard file descriptors, what are their purpose and what are their POSIX names
